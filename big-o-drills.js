@@ -223,38 +223,38 @@ function stringSplitter(string) {
 
 // console.log(stringSplitter('02/20/2020/hi'));
 
-function fibIt(num){
-  result = []
-  for(let i = 1; i <= num; i++){
-    if(i === 1 ){
-      result.push(1)
+function fibIt(num) {
+  let result = [];
+  for (let i = 1; i <= num; i++) {
+    if (i === 1) {
+      result.push(1);
     }
-    else if(i === 2){
-      result.push(1)
+    else if (i === 2) {
+      result.push(1);
     }
-    else{
-      result.push(result[i-2] + result[i-3])
+    else {
+      result.push(result[i - 2] + result[i - 3]);
     }
   }
-  return result
+  return result;
 }
 
 
 //console.log(fibIt(7))
 
-function factorThis(num){
+function factorThis(num) {
   let result = 1;
-  for(let i = num; i > 0; i--){
-    result *= i
+  for (let i = num; i > 0; i--) {
+    result *= i;
   }
-  return result
+  return result;
 }
-console.log(factorThis(5))
+console.log(factorThis(5));
 
 /*
   13. RECURSIVE Big O
     A - Counting Sheep
-    Big O notation would be O(n) because with a large number you would recive a linearly sized 
+    Big O notation would be O(n) because with a large number you would recive a linearly sized
     output. 1000 would return 1000 lines of Sheep.
 
     B - PowerCalculator
@@ -267,9 +267,9 @@ console.log(factorThis(5))
     E - Big 0 notation would be O(n). The output with scale linearly with the input.
 
     F - Big 0 notation would be O(n). The output with scale linearly with the input.
-      
+
     G - Big 0 notation would be O(n). The output with scale linearly with the input.
-    
+
     H - Maze
       Although the maze is ran up to 4 times it would be O(4n) which is still O(n)
 
@@ -281,4 +281,13 @@ console.log(factorThis(5))
     K - Binary
         Big 0 notation would be O(n). The output with scale linearly with the input.
 
+
+    14. Iterative Big O
+    A- Linear O(n)- loop through once based on the value/size of n.
+    B- Linear O(n)- loop through once based on the value/size of the exponent.
+    C- Linear O(n)- loops through once based on the length of the string.
+    D- Linear O(n)- loops through once based on the size of n
+    E- Linear O(n)- loops through once based on the length of the string.
+    F- Linear O(n)- loops through once based on the size of n passed in to it.
+    G- Linear O(n)- loops through once based on the size of n passed in to it. 
   */
