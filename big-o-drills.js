@@ -132,6 +132,77 @@ on the number with an incrementing i value. The Big O for this algorithm is line
 the value of the number increases, so does the complexity/number of loops.
 
 
-
-
 */
+
+
+function sheep(n){
+  for(let i=n; i>=0; i--){
+    if (i === 0){
+      console.log('All sheep jumped over the fence.');
+    }
+    else {
+      console.log(`${i}: Another sheep jumps over the fence.`)
+    }
+    
+  }
+}
+// sheep(4);
+
+function powerCalculator(int, exp){
+  let result = 1;
+  while (exp > 0 ) {
+    result *= int;
+    exp--;
+  }
+  return result;
+}
+
+// console.log(powerCalculator(10,3));
+
+function stringReverser(string){
+  let result= '';
+  for (let i=string.length; i>=0 ; i--) {
+    result += string.charAt(i);
+  }
+  return result;
+}
+
+// console.log(stringReverser('hello'));
+
+function nthTriangular(num){
+  let result=0;
+  for (let i=num; i>= 0; i--){
+    result += i;
+  }
+  return result;
+}
+
+// console.log(nthTriangular(3));
+
+function stringSplitter(string){
+  let result = [];
+  let newString ='';
+  for(let i=0; i<= string.length; i++) {
+    if (string[i] !== '/' && string[i] !== undefined){
+      newString += string[i];
+      // console.log(newString);
+    }
+    else{
+      
+      result.push(newString);
+      newString ='';
+    }
+  }
+  return result;
+}
+
+// console.log(stringSplitter('02/20/2020/hi'));
+
+
+
+
+
+
+
+
+
