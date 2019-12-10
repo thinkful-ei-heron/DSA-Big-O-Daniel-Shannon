@@ -131,26 +131,50 @@ the number that is passed in is a prime number. It does this by repeating the mo
 on the number with an incrementing i value. The Big O for this algorithm is linear O(n) because as 
 the value of the number increases, so does the complexity/number of loops.
 
-
+11. Tower of Hanoi
+The runtime of the algorithm is Big O polynomial time O(n^2) because
+the algorithm iterates over the num based on the value passed in twice (happening in the else statement).
+So when the algorithm is run with 5 disks, there are 31 steps needed to complete it.
+When run with 7 disks there are 127 steps needed to complete it.   
 */
 
+function TOH(num, source, dest, temp) {
 
-function sheep(n){
-  for(let i=n; i>=0; i--){
-    if (i === 0){
+  if (num <= 1) {
+    return print(source, dest);
+  }
+  else {
+    TOH(num - 1, source, temp, dest);
+    print(source, dest);
+    TOH(num - 1, temp, dest, source);
+  }
+}
+
+// 12. Iterative version
+
+function print(source, dest) {
+  console.log(`Moving from ${source} to ${dest}`);
+}
+
+// TOH(5, 'A', 'C', 'B');
+
+
+function sheep(n) {
+  for (let i = n; i >= 0; i--) {
+    if (i === 0) {
       console.log('All sheep jumped over the fence.');
     }
     else {
-      console.log(`${i}: Another sheep jumps over the fence.`)
+      console.log(`${i}: Another sheep jumps over the fence.`);
     }
-    
+
   }
 }
 // sheep(4);
 
-function powerCalculator(int, exp){
+function powerCalculator(int, exp) {
   let result = 1;
-  while (exp > 0 ) {
+  while (exp > 0) {
     result *= int;
     exp--;
   }
@@ -159,9 +183,9 @@ function powerCalculator(int, exp){
 
 // console.log(powerCalculator(10,3));
 
-function stringReverser(string){
-  let result= '';
-  for (let i=string.length; i>=0 ; i--) {
+function stringReverser(string) {
+  let result = '';
+  for (let i = string.length; i >= 0; i--) {
     result += string.charAt(i);
   }
   return result;
@@ -169,9 +193,9 @@ function stringReverser(string){
 
 // console.log(stringReverser('hello'));
 
-function nthTriangular(num){
-  let result=0;
-  for (let i=num; i>= 0; i--){
+function nthTriangular(num) {
+  let result = 0;
+  for (let i = num; i >= 0; i--) {
     result += i;
   }
   return result;
@@ -179,18 +203,18 @@ function nthTriangular(num){
 
 // console.log(nthTriangular(3));
 
-function stringSplitter(string){
+function stringSplitter(string) {
   let result = [];
-  let newString ='';
-  for(let i=0; i<= string.length; i++) {
-    if (string[i] !== '/' && string[i] !== undefined){
+  let newString = '';
+  for (let i = 0; i <= string.length; i++) {
+    if (string[i] !== '/' && string[i] !== undefined) {
       newString += string[i];
       // console.log(newString);
     }
-    else{
-      
+    else {
+
       result.push(newString);
-      newString ='';
+      newString = '';
     }
   }
   return result;
