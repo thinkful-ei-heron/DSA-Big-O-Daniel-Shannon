@@ -25,6 +25,42 @@
   A basic math operation is performed on the one argument and a true or false value is returned. 
   The length of time to complete the algorithm will not change. 
 
+3. Are you here?
+  function areYouHere(arr1, arr2) {
+      for (let i = 0; i < arr1.length; i++) {
+          const el1 = arr1[i];
+          for (let j = 0; j < arr2.length; j++) {
+              const el2 = arr2[j];
+              if (el1 === el2) return true;
+          }
+      }
+      return false;
+  }
+
+  This algorithm's Big O would be O(n^2) because in the worst case the array1 and array2 would be equal.
+  Effectivly n*n
+
+4. Doubler
+  function doubleArrayValues(array) {
+    for (let i = 0; i < array.length; i++) {
+        array[i] *= 2;
+    }
+    return array;
+  }
+
+  This algorithm Big O would be O(n) because it is looping through an array and multiplying each index by 2.
+
+  5. Naive search
+  function naiveSearch(array, item) {
+      for (let i = 0; i < array.length; i++) {
+          if (array[i] === item) {
+              return i;
+          }
+      }
+  }
+  
+  This algorithm's Big O would be O(n) because it is looping through an array and comparing the index with an
+  item and returning the item.
 
 
 /*
