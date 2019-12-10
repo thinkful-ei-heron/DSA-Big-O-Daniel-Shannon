@@ -63,4 +63,75 @@
   item and returning the item.
 
 
-/*
+  6. Creating pairs: 
+  function createPairs(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for(let j = i + 1; j < arr.length; j++) {
+            console.log(arr[i] + ", " +  arr[j] );
+        }
+    }
+}
+
+This algorithm would be Big O polynomial O(n^2) because the array is being looped over
+twice. Therefore the complexity of the algorithm is directly related to the size of the array times
+itself.
+
+7. Compute the sequence
+function compute(num) {
+    let result = [];
+    for (let i = 1; i <= num; i++) {
+
+        if (i === 1) {
+            result.push(0);
+        }
+        else if (i == 2) {
+            result.push(1);
+        }
+        else {
+            result.push(result[i - 2] + result[i - 3]);
+        }
+    }
+    return result;
+}
+
+The alogorithm above recevies a number as an input. It then loops through based on the
+size of the number that was passed in, then pushes values into an array based on the value
+of i. This essentially is creating the fibonnaci sequence by using a for loop. The complexity
+of the algorithm is directly related to the size of the value of the number passed in. Therefore
+the Big O is Linear O(n). 
+
+
+8. An efficient search
+  The Big O of this algorithm is Logarithmic O(log(n)). This is because the algorithm
+  uses a while loop that decreases the size of the array by half every time through the loop.
+  This is significant because even as the size of the array increases there is not a large increase
+  in the run time of the algorithm. 
+
+9. Random Element
+  This Big O of this algorithm is Constant O(1). This algorithm accepts an array as input.
+  Regardless of the size of that array it will generate a random number index based on the length of the array
+  and will return a random item from the array at that index number.
+
+10. What Am I?
+  function isWhat(n) {
+    if (n < 2 || n % 1 != 0) {
+        return false;
+    }
+    for (let i = 2; i < n; ++i) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
+This algorithm takes a number as an input. It first assesses to see if the number
+is less than two or if the number is not a whole number then it will return false.
+So if n is greater than or equal to 2 and a whole number we move on to the for loop.
+The for loop will loop through based on the size of the value of n. The loop will determine if
+the number that is passed in is a prime number. It does this by repeating the modulus operation
+on the number with an incrementing i value. The Big O for this algorithm is linear O(n) because as 
+the value of the number increases, so does the complexity/number of loops.
+
+
+
+
+*/
