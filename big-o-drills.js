@@ -136,6 +136,7 @@ The runtime of the algorithm is Big O polynomial time O(n^2) because
 the algorithm iterates over the num based on the value passed in twice (happening in the else statement).
 So when the algorithm is run with 5 disks, there are 31 steps needed to complete it.
 When run with 7 disks there are 127 steps needed to complete it.   
+
 */
 
 function TOH(num, source, dest, temp) {
@@ -249,3 +250,35 @@ function factorThis(num){
   return result
 }
 console.log(factorThis(5))
+
+/*
+  13. RECURSIVE Big O
+    A - Counting Sheep
+    Big O notation would be O(n) because with a large number you would recive a linearly sized 
+    output. 1000 would return 1000 lines of Sheep.
+
+    B - PowerCalculator
+    Big O notation would be O(n) because the function call itself until the base case of exponent === 0. So with an exponent of 5 it would call itself 5 times.
+
+    C - Big O notation would be O(n) the return is linearly proportional to the length of the string.
+
+    D - Big 0 notation would be O(n). The output with scale linearly with the input.
+
+    E - Big 0 notation would be O(n). The output with scale linearly with the input.
+
+    F - Big 0 notation would be O(n). The output with scale linearly with the input.
+      
+    G - Big 0 notation would be O(n). The output with scale linearly with the input.
+    
+    H - Maze
+      Although the maze is ran up to 4 times it would be O(4n) which is still O(n)
+
+    I - Anagrams
+      Big 0 notation would be O(n). The output would scale linearly with the input.
+
+    J - Oragnization Chart
+        Big 0 notation would be O(n). The output with scale linearly with the input.
+    K - Binary
+        Big 0 notation would be O(n). The output with scale linearly with the input.
+
+  */
