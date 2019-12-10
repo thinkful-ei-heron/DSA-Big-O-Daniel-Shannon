@@ -238,4 +238,14 @@ function fibIt(num){
   return result
 }
 
-console.log(fibIt(7))
+
+//console.log(fibIt(7))
+
+function factorThis(num){
+  let result = 1;
+  for(let i = num; i > 0; i--){
+    result *= i
+  }
+  return result
+}
+console.log(factorThis(5))
