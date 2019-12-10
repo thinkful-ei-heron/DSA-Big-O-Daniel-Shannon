@@ -222,11 +222,20 @@ function stringSplitter(string) {
 
 // console.log(stringSplitter('02/20/2020/hi'));
 
+function fibIt(num){
+  result = []
+  for(let i = 1; i <= num; i++){
+    if(i === 1 ){
+      result.push(1)
+    }
+    else if(i === 2){
+      result.push(1)
+    }
+    else{
+      result.push(result[i-2] + result[i-3])
+    }
+  }
+  return result
+}
 
-
-
-
-
-
-
-
+console.log(fibIt(7))
